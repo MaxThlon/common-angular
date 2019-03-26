@@ -1,0 +1,18 @@
+:host {
+  display: block;
+  width: 20%;
+  background-color: lavender;
+}
+
+.thlon-toolbar {
+  height: 30px;
+}
+
+.thlon-group-viewport {
+  height: 400px;
+  border: 1px solid black;
+}
+
+.thlon-group {
+  height: 50px;
+}

@@ -1,0 +1,32 @@
+<mat-menu #contextMenu="matMenu" [overlapTrigger]="false">
+  <ng-template matMenuContent>
+    <span *ngFor="let item of menuItems">
+      <span [ngSwitch]="item.menuItemType">
+        <!-- Handle branch menu items -->
+        <span *ngSwitchCase="EEThlonMenuItemType.Branch">
+          <button mat-menu-item [matMenuTriggerFor]="Menu.contextMenu" color="primary">
+            <mat-icon>{{item.iconName}}</mat-icon>
+            <span>{{item.translation | translate}}</span>
+          </button>
+          <thlon-menu-item #Menu [menuItems]="item.children"></thlon-menu-item>
+        </span>
+
+        <!-- Handle route menu items -->
+        <span *ngSwitchCase="EEThlonMenuItemType.Route">
+          <button mat-menu-item [routerLink]="item.route"> <!-- skipLocationChange -->
+            <mat-icon>{{item.iconName}}</mat-icon>
+            <span>{{item.translation | translate}}</span>
+          </button>
+        </span>
+
+        <!-- Handle method menu items -->
+        <span *ngSwitchCase="EEThlonMenuItemType.ServiceMethod">
+          <button mat-menu-item (click)="callServiceMethod($event, item)">
+            <mat-icon>{{item.iconName}}</mat-icon>
+            <span>{{item.translation | translate}}</span>
+          </button>
+        </span>
+      </span>
+    </span>
+  </ng-template>
+</mat-menu>

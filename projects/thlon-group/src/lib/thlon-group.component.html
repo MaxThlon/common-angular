@@ -1,0 +1,32 @@
+<mat-toolbar class="thlon-toolbar">
+  <thlon-menu [hidden]="!selectedThlonGroup" [rootMenuItemList]="menuItemList"></thlon-menu>
+</mat-toolbar>
+<cdk-virtual-scroll-viewport itemSize="50" class="thlon-group-viewport">
+  <div *cdkVirtualFor="let thlonGroup of thlonGroupDataSource" class="thlon-group">
+    <span [class.selected]="thlonGroup === selectedThlonGroup" (click)="onSelect(thlonGroup)">
+      <!--<span class="badge">{{thlonGroup.id}}</span>-->
+      {{thlonGroup.name}}
+    </span>
+  </div>
+</cdk-virtual-scroll-viewport>
+<!--
+    <ul *ngIf="thlonGroupList | async as thlonGroupListS else noData">
+      <li *ngFor="let thlonGroup of thlonGroupListS">
+        <span [class.selected]="thlonGroup === selectedThlonGroup" (click)="onSelect(thlonGroup)">
+          <span class="badge">{{thlonGroup.id}}</span> {{thlonGroup.name}}
+        </span>
+        <app-thlon-menu></app-thlon-menu>
+      </li>
+    </ul>
+    <ng-template #noData>No Data Available</ng-template>
+  </ul> -->
+<!--<div *ngIf="selectedThlonGroup">
+    <h2>{{selectedThlonGroup.name | uppercase}} Details</h2>
+    <div><span>id: </span>{{selectedThlonGroup.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="selectedThlonGroup.name" placeholder="name">
+      </label>
+    </div>
+    <app-thlon-group [thlonGroup]="selectedThlonGroup"></app-thlon-group>
+  </div>-->

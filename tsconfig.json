@@ -17,6 +17,20 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "thlon-menu": [
+        "dist/thlon-menu"
+      ],
+      "thlon-menu/*": [
+        "dist/thlon-menu/*"
+      ],
+      "thlon-group": [
+        "dist/thlon-group"
+      ],
+      "thlon-group/*": [
+        "dist/thlon-group/*"
+      ]
+    }
   }
 }
