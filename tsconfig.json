@@ -30,6 +30,18 @@
       ],
       "thlon-group/*": [
         "dist/thlon-group/*"
+      ],
+      "thlon-keycloak": [
+        "dist/thlon-keycloak"
+      ],
+      "thlon-keycloak/*": [
+        "dist/thlon-keycloak/*"
+      ],
+      "thlon-stomp": [
+        "dist/thlon-stomp"
+      ],
+      "thlon-stomp/*": [
+        "dist/thlon-stomp/*"
       ]
     }
   }

@@ -72,6 +72,76 @@
           }
         }
       }
+    },
+    "thlon-keycloak": {
+      "root": "projects/thlon-keycloak",
+      "sourceRoot": "projects/thlon-keycloak/src",
+      "projectType": "library",
+      "prefix": "thlon",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/thlon-keycloak/tsconfig.lib.json",
+            "project": "projects/thlon-keycloak/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/thlon-keycloak/src/test.ts",
+            "tsConfig": "projects/thlon-keycloak/tsconfig.spec.json",
+            "karmaConfig": "projects/thlon-keycloak/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/thlon-keycloak/tsconfig.lib.json",
+              "projects/thlon-keycloak/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "thlon-stomp": {
+      "root": "projects/thlon-stomp",
+      "sourceRoot": "projects/thlon-stomp/src",
+      "projectType": "library",
+      "prefix": "thlon",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/thlon-stomp/tsconfig.lib.json",
+            "project": "projects/thlon-stomp/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/thlon-stomp/src/test.ts",
+            "tsConfig": "projects/thlon-stomp/tsconfig.spec.json",
+            "karmaConfig": "projects/thlon-stomp/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/thlon-stomp/tsconfig.lib.json",
+              "projects/thlon-stomp/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "thlon-menu"

@@ -8,8 +8,8 @@ import {MatIconModule,
         MatInputModule} from '@angular/material';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 import {TranslateModule} from '@ngx-translate/core';
-import {RxStompService} from '@stomp/ng2-stompjs';
 import {ThlonMenuModule} from 'thlon-menu';
+import {ThlonGroupService} from './thlon-group.service';
 import {ThlonGroupComponent} from './thlon-group.component';
 import {ThlonGroupDialogRenameComponent} from './thlon-group-dialog-rename/thlon-group-dialog-rename.component';
 
@@ -31,9 +31,11 @@ import {ThlonGroupDialogRenameComponent} from './thlon-group-dialog-rename/thlon
     ThlonGroupDialogRenameComponent
   ],
   providers: [
-    RxStompService
+    ThlonGroupService
   ],
-  exports: [ThlonGroupComponent],
+  exports: [
+    ThlonGroupComponent
+  ],
   entryComponents: [ThlonGroupDialogRenameComponent]
 })
 export class ThlonGroupModule { }

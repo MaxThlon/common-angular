@@ -2,6 +2,11 @@
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/thlon-group",
   "lib": {
-    "entryFile": "src/public-api.ts"
+    "entryFile": "src/public-api.ts",
+    "umdModuleIds": {
+      "@ngx-translate/core": "ngx-translate-core",
+      "@stomp/ng2-stompjs": "stomp-ng2-stompjs",
+      "thlon-menu": "thlon-menu"
+    }
   }
 }

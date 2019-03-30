@@ -39,6 +39,10 @@ export class ThlonGroupComponent implements OnInit {
     //this.thlonGroupList$ = this.thlonGroupService.getThlonGroups();
   }*/
 
+  onquerymenu() {
+    this.rxStompService.publish({destination: "/app/groups"});
+  }
+
   onSelect(thlonGroup: ThlonGroup): void {
     this.selectedThlonGroup = thlonGroup;
     this.menuItemList = this.generateMenuItemList();

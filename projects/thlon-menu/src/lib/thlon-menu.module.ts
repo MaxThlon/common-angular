@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatIconModule,
         MatButtonModule,
         MatMenuModule} from '@angular/material';
@@ -10,8 +10,8 @@ import {ThlonMenuItemComponent} from './thlon-menu-item/thlon-menu-item.componen
 
 @NgModule({
   imports: [
+    CommonModule,
     RouterModule,
-    BrowserAnimationsModule,
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
