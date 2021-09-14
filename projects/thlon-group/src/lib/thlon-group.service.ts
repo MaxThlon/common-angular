@@ -11,5 +11,7 @@ import {ThlonDataType,
 export class ThlonGroupService {
   constructor(private rxStompService: RxStompService) { }
   createGroup(){}
-  updateGroup(thlonGroup: ThlonGroup){}
+  updateGroup(thlonGroup: ThlonGroup){
+    
+  }
 }

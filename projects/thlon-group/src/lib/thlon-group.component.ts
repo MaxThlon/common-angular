@@ -39,16 +39,12 @@ export class ThlonGroupComponent implements OnInit {
     //this.thlonGroupList$ = this.thlonGroupService.getThlonGroups();
   }*/
 
-  onquerymenu() {
-    this.rxStompService.publish({destination: "/app/groups"});
-  }
-
   onSelect(thlonGroup: ThlonGroup): void {
     this.selectedThlonGroup = thlonGroup;
     this.menuItemList = this.generateMenuItemList();
   }
 
-  generateMenuItemList () {
+  generateMenuItemList() {
     let menuItemList: ThlonMenuItemList;
     if (this.selectedThlonGroup) {
       menuItemList = [
@@ -60,7 +56,7 @@ export class ThlonGroupComponent implements OnInit {
           methodName: "open",
           methodParameterArray: [ThlonGroupDialogRenameComponent,
                                  {width: '250px',
-                                  data: {group: this.selectedThlonGroup}}]
+                                  data: {thlonGroup: this.selectedThlonGroup}}]
         },
         {
           menuItemType: EThlonMenuItemType.ServiceMethod,
